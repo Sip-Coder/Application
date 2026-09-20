@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Jonathan Yu">
+  <rect width="64" height="64" rx="14" fill="#0a1f24"/>
+  <path d="M18 38c0 8 6 14 14 14s14-6 14-14H18z" fill="#9fdaf5"/>
+  <path d="M22 20h20c2 0 4 2 4 5v7H18v-7c0-3 2-5 4-5z" fill="#f4e8c8"/>
+  <path d="M46 26h4c3 0 6 3 6 6s-3 6-6 6h-4" fill="none" stroke="#edd4a8" stroke-width="3"/>
+  <circle cx="28" cy="16" r="2.2" fill="#d8e6da"/>
+  <circle cx="34" cy="13" r="1.6" fill="#d8e6da"/>
+</svg>
