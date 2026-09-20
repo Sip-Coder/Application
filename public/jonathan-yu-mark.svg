@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 520" role="img" aria-label="Jonathan Yu mark">
+  <defs>
+    <linearGradient id="field" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#143f43"/>
+      <stop offset="0.55" stop-color="#0b2228"/>
+      <stop offset="1" stop-color="#1a1510"/>
+    </linearGradient>
+    <linearGradient id="cup" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff3cc"/>
+      <stop offset="1" stop-color="#edd4a8"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="520" rx="36" fill="url(#field)"/>
+  <circle cx="330" cy="70" r="90" fill="#9fdaf5" opacity="0.12"/>
+  <circle cx="60" cy="460" r="110" fill="#185552" opacity="0.45"/>
+  <text x="36" y="168" fill="#fff3cc" font-family="Georgia, serif" font-size="148" font-weight="600" letter-spacing="-8">JY</text>
+  <text x="42" y="214" fill="#9fdaf5" font-family="Outfit, sans-serif" font-size="18" letter-spacing="4">BUILDER · EDUCATOR</text>
+  <g transform="translate(42, 268)">
+    <path d="M24 48c0 38 28 68 68 68s68-30 68-68H24z" fill="#9fdaf5"/>
+    <path d="M40 12h104c10 0 18 8 18 18v18H22V30c0-10 8-18 18-18z" fill="url(#cup)"/>
+    <path d="M168 32h18c16 0 28 14 28 30s-12 30-28 30h-18" fill="none" stroke="#edd4a8" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="70" cy="0" r="7" fill="#d8e6da"/>
+    <circle cx="92" cy="-12" r="5" fill="#d8e6da"/>
+  </g>
+  <text x="42" y="470" fill="#f6edd6" font-family="Georgia, serif" font-size="28">Sip Studies</text>
+  <text x="42" y="498" fill="rgba(246,237,214,0.62)" font-family="Outfit, sans-serif" font-size="16">Las Vegas · sipopedia.com</text>
+</svg>
