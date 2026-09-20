@@ -2,7 +2,9 @@
 
 Personal resume / portfolio one-pager for **Jonathan Yu**, a builder-educator behind [Sip Studies](https://sipstudies.com) and [Sipopedia](https://sipopedia.com).
 
-This is a Vite + React + TypeScript single-page site. The production build is static (`dist/`) and can be hosted on GitHub Pages, Netlify, Vercel, or any static host.
+**Live site:** https://sip-coder.github.io/Application/
+
+This is a Vite + React + TypeScript single-page site. Vite `base` is set to `/Application/` so asset URLs resolve on the project GitHub Pages URL.
 
 ## Run locally
 
@@ -22,9 +24,11 @@ npm run preview
 
 `npm run build` typechecks and writes a static site to `dist/`. `npm run preview` serves that folder locally.
 
-## Deploy
+## GitHub Pages
 
-The `dist/` folder is a static site. Point GitHub Pages, Netlify, Vercel, or any static host at it. For Vercel/Netlify, the build command is `npm run build` and the publish directory is `dist`.
+Pushes to `main` run [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml). The workflow builds the site, uploads `dist` with `actions/upload-pages-artifact`, and publishes it with `actions/deploy-pages`.
+
+In the repository, set **Settings → Pages → Build and deployment → Source** to **GitHub Actions** if it is not already selected.
 
 ## What’s on the page
 
