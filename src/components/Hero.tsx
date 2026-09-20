@@ -38,7 +38,7 @@ export function Hero() {
         </div>
       </div>
       <aside className="portrait-card">
-        <img src={profile.portrait} alt="Jonathan Yu" width={420} height={420} />
+        <img src={profile.portrait} alt="Jonathan Yu monogram" width={420} height={520} />
         <footer>
           <strong>{profile.role}</strong>
           <span>

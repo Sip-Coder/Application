@@ -8,7 +8,7 @@ export const profile = {
   sipstudies: "https://sipstudies.com",
   sipopedia: "https://sipopedia.com",
   bioSite: "https://bio.site/SipStudies",
-  portrait: "/jonathan-yu.png",
+  portrait: "/jonathan-yu-mark.svg",
   positioning:
     "I turn beverage craft, classroom teaching, and AI-assisted building into learning products people can actually use.",
   summary:
