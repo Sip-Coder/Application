@@ -11,25 +11,16 @@ const previews = {
 
 export function CaseStudies() {
   return (
-    <section className="section wrap" id="work" aria-labelledby="work-title">
-      <div className="section-head">
-        <h2 id="work-title">Case studies</h2>
-      </div>
-      {caseStudies.map((study, index) => (
-        <article
-          className={index % 2 === 1 ? "case case--flip" : "case"}
-          key={study.id}
-        >
+    <section className="cases" id="work" aria-label="Case studies">
+      {caseStudies.map((study) => (
+        <article className="case" key={study.id}>
           {previews[study.id]}
           <div className="case__copy">
-            <p className="eyebrow">{study.eyebrow}</p>
             <h3>{study.title}</h3>
             <p>{study.summary}</p>
-            <div className="case__actions">
-              <a className="btn btn--primary" href={study.href} target="_blank" rel="noreferrer">
-                {study.hrefLabel}
-              </a>
-            </div>
+            <a href={study.href} target="_blank" rel="noreferrer">
+              {study.hrefLabel}
+            </a>
           </div>
         </article>
       ))}

@@ -1,26 +1,27 @@
-import { selectedWork, workAccents } from "../data/site";
+import { selectedWork } from "../data/site";
+
+const featured = selectedWork.filter((item) => item.note !== "Layout reference only");
+const reference = selectedWork.find((item) => item.note === "Layout reference only");
 
 export function SelectedWork() {
   return (
-    <section className="section wrap" id="selected" aria-labelledby="selected-title">
-      <div className="section-head">
-        <h2 id="selected-title">Selected work</h2>
-      </div>
+    <section id="selected" aria-label="Selected work">
       <div className="work-grid">
-        {selectedWork.map((item, index) => (
-          <a
-            className="work-card"
-            key={item.title}
-            href={item.href}
-            target="_blank"
-            rel="noreferrer"
-            style={{ borderTopColor: workAccents[index] }}
-          >
+        {featured.map((item) => (
+          <a className="work-card" key={item.title} href={item.href} target="_blank" rel="noreferrer">
+            <div className="work-thumb" aria-hidden="true" />
             <h3>{item.title}</h3>
-            <p>{item.note}</p>
           </a>
         ))}
       </div>
+      {reference ? (
+        <p className="work-note">
+          Layout reference only:{" "}
+          <a href={reference.href} target="_blank" rel="noreferrer">
+            {reference.title}
+          </a>
+        </p>
+      ) : null}
     </section>
   );
 }

@@ -33,7 +33,9 @@ export function SiteFrame({ urlLabel, children }: SiteFrameProps) {
           Fullscreen
         </button>
       </div>
-      <div className="site-frame__screen">{children}</div>
+      <div className="site-frame__viewport">
+        <div className="site-frame__scale">{children}</div>
+      </div>
     </div>
   );
 }
