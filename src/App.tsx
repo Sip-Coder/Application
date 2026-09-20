@@ -15,7 +15,7 @@ export default function App() {
         <Contact />
       </main>
       <footer className="wrap page-foot">
-        <span>Jonathan Yu · Builder-educator</span>
+        <span>Jonathan Yu — builder-educator for beverage + AI product</span>
         <span>Vite · React · TypeScript</span>
       </footer>
     </div>

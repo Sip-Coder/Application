@@ -1,121 +1,81 @@
 export const profile = {
   name: "Jonathan Yu",
-  role: "Builder-educator",
-  location: "Las Vegas, NV",
-  email: "JonYu3@gmail.com",
-  linkedin: "https://www.linkedin.com/in/jon-yu-sipopedia",
+  role: "builder-educator for beverage + AI product",
   github: "https://github.com/Sip-Coder",
   sipstudies: "https://sipstudies.com",
   sipopedia: "https://sipopedia.com",
-  bioSite: "https://bio.site/SipStudies",
-  positioning:
-    "I turn beverage craft, classroom teaching, and AI-assisted building into learning products people can actually use.",
+  positioning: "builder-educator for beverage + AI product.",
   summary:
-    "Founder of Sip Studies and Sipopedia. Certified Wine Educator and Court of Master Sommeliers Certified Sommelier. Ten-plus years in wine and spirits sales, curriculum, and live education — now shipping Vite + React tools across Learn, Taste, and Connect."
+    "I design and ship learning tools that help people taste, teach, and connect — Sipopedia, Sip Studies, and focused apps like Coffee Index and Zen Noise."
 };
-
-export const credentials = [
-  "CWE · Society of Wine Educators",
-  "CMS Certified Sommelier",
-  "WSET Level 3 Wine",
-  "MIT AI Strategy",
-  "Architecture B.S., Wentworth"
-];
 
 export const caseStudies = [
   {
     id: "sipopedia",
-    eyebrow: "01 · Flagship",
+    eyebrow: "01",
     title: "Sipopedia.com",
-    kicker: "Beverage education hub",
-    liveUrl: "https://sipopedia.com",
-    liveLabel: "sipopedia.com",
-    repoUrl: "https://sipstudies.com",
-    repoLabel: "sipstudies.com",
-    status: "Live product",
     summary:
-      "The public front door for Sip Studies: Sip Academy learning, Sippy GPTs, a flavor blog, community, and a water-access mission. Built as a Vite + React + TypeScript SPA with Learn / Taste / Connect product lanes.",
-    story:
-      "A deep beverage domain needed to become a usable learning product instead of scattered lessons, posts, and one-off classes. Jonathan mapped curriculum, terminology, tasting practice, and community into inspectable software.",
-    proof: [
-      "Learn · Taste · Connect product areas",
-      "Sip Studies / Sippy GPTs for studying and service",
-      "Flavor blog + water-access mission",
-      "20,000-row terminology pipeline with citations"
-    ]
+      "Learn / Taste / Connect beverage education SPA (Vite/React/TS). Live product for studying, exploring flavor, and community.",
+    href: "https://sipopedia.com",
+    hrefLabel: "sipopedia.com"
   },
   {
     id: "coffee-index",
-    eyebrow: "02 · Sip Studies lane",
+    eyebrow: "02",
     title: "Coffee Index",
-    kicker: "Tasting / market-index app",
-    liveUrl: "https://github.com/Sip-Coder/Coffee-Index",
-    liveLabel: "github.com/Sip-Coder/Coffee-Index",
-    repoUrl: "https://github.com/Sip-Coder/Coffee-Index",
-    repoLabel: "Source on GitHub",
-    status: "Public Vite app",
-    summary:
-      "A local-first Vite dashboard that models what a solo espresso costs across U.S. cities, ranked against a national baseline. Fast data storytelling from the Sip Studies tasting lane.",
-    story:
-      "The same tasting instinct as wine education, applied to coffee economics: city rankings, regional averages, and a transparent methodology that works instantly on localhost.",
-    proof: [
-      "City-by-city espresso cost model",
-      "Regional averages and index of 100",
-      "Methodology narrative, not a black box"
-    ]
+    summary: "Vite coffee tasting/index app from the Sip Studies build lane.",
+    href: "https://github.com/Sip-Coder/Coffee-Index",
+    hrefLabel: "github.com/Sip-Coder/Coffee-Index"
   },
   {
     id: "zen-noise",
-    eyebrow: "03 · Focus product",
+    eyebrow: "03",
     title: "Zen Noise",
-    kicker: "Ambient focus app",
-    liveUrl: "https://zen-noise.replit.app/",
-    liveLabel: "zen-noise.replit.app",
-    repoUrl: "https://github.com/Sip-Coder/Zen-Noise",
-    repoLabel: "Source on GitHub",
-    extraUrl: "https://replit.com/@SipStudies/Zen-Noise",
-    extraLabel: "Replit origin",
-    status: "Web Audio · shareable mixes",
     summary:
-      "A Replit-origin ambient mixer: brown noise, recorded layers, layer modulation, a focus timer, curated presets, shuffle, saved local mixes, and shareable mix links. No data collection.",
-    story:
-      "A focus-noise idea became a durable, user-controlled workflow — local persistence, linkable states, and inspectable production behavior instead of a one-off prototype.",
-    proof: [
-      "Web Audio layers + brown noise",
-      "Curated mixes, shuffle, and shareable links",
-      "Saved on-device mixes · no data collection"
-    ]
+      "Ambient focus app with Web Audio layers, curated mixes, and shareable links.",
+    href: "https://github.com/Sip-Coder/Zen-Noise",
+    hrefLabel: "github.com/Sip-Coder/Zen-Noise"
   }
 ] as const;
 
 export const selectedWork = [
   {
-    title: "Biz-Bookkeeper",
-    tag: "TypeScript ledger",
-    href: "https://github.com/Sip-Coder/Biz-Bookkeeper",
-    blurb:
-      "Small-business bookkeeping workspace: dashboard, transactions, P&L, tax insights, goals, and companies. Replit-origin TypeScript monorepo."
-  },
-  {
     title: "Rose Quartz",
-    tag: "Client site",
     href: "https://github.com/Sip-Coder/Rose-Quartz",
-    blurb:
-      "Las Vegas therapeutic massage launch site — services, body-map intake, care standards, and a 36-article journal."
+    note: "github.com/Sip-Coder/Rose-Quartz"
   },
   {
-    title: "Sunset in Monaco",
-    tag: "Narrative RPG",
+    title: "Biz Bookkeeper",
+    href: "https://github.com/Sip-Coder/Biz-Bookkeeper",
+    note: "github.com/Sip-Coder/Biz-Bookkeeper"
+  },
+  {
+    title: "sunset-in-monaco-rpg",
     href: "https://github.com/Sip-Coder/sunset-in-monaco-rpg",
-    blurb:
-      "Point-and-click murder mystery. Inspect five hotspots at a fashion afterparty, then accuse a suspect before the night closes."
+    note: "github.com/Sip-Coder/sunset-in-monaco-rpg"
   },
   {
-    title: "Application demo",
-    tag: "Layout reference",
+    title: "jonathan-yu-application-demo",
     href: "https://github.com/Sip-Coder/jonathan-yu-application-demo",
-    blurb:
-      "Earlier recruiter walkthrough that pioneered the websites-within-a-website preview pattern this page continues. Not a primary case study."
+    note: "Layout reference only"
+  }
+] as const;
+
+export const contacts = [
+  {
+    label: "GitHub",
+    value: "github.com/Sip-Coder",
+    href: "https://github.com/Sip-Coder"
+  },
+  {
+    label: "Sipopedia",
+    value: "sipopedia.com",
+    href: "https://sipopedia.com"
+  },
+  {
+    label: "Sip Studies",
+    value: "sipstudies.com",
+    href: "https://sipstudies.com"
   }
 ] as const;
 

@@ -18,10 +18,9 @@ export function BrandMark({ compact = false }: BrandMarkProps) {
     <div className="identity-panel">
       <p className="eyebrow">Sip Studies</p>
       <p className="identity-panel__mark">JY</p>
-      <p className="identity-panel__role">Builder-educator</p>
+      <p className="identity-panel__role">builder-educator</p>
       <p className="identity-panel__copy">
-        Learning products at the intersection of beverage craft, teaching, and
-        AI-assisted software.
+        Beverage + AI product. Learning tools to taste, teach, and connect.
       </p>
       <div className="identity-lanes">
         <span>Learn</span>

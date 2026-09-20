@@ -3,9 +3,9 @@ import { BrandMark } from "./BrandMark";
 
 const links = [
   { href: "#work", label: "Case studies" },
-  { href: "#selected", label: "Selected" },
+  { href: "#selected", label: "Selected work" },
   { href: "#contact", label: "Contact" },
-  { href: profile.linkedin, label: "LinkedIn", external: true }
+  { href: profile.github, label: "GitHub", external: true }
 ];
 
 export function Nav() {
@@ -16,7 +16,7 @@ export function Nav() {
           <BrandMark compact />
           <div>
             <strong>{profile.name}</strong>
-            <span>{profile.role}</span>
+            <span>builder-educator</span>
           </div>
         </a>
         <nav className="nav__links" aria-label="Primary">

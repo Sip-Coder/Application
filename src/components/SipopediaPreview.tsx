@@ -5,20 +5,20 @@ const lanes = [
   {
     id: "learn",
     label: "Learn",
-    title: "Sip Academy",
-    copy: "Structured beverage study, quizzes, maps, and Sippy as Pocket Educator."
+    title: "Learn",
+    copy: "Studying beverage education in a Vite/React/TS SPA."
   },
   {
     id: "taste",
     label: "Taste",
-    title: "Flavor practice",
-    copy: "Flavor wheel, tasting journal, and the intimate flavor blog."
+    title: "Taste",
+    copy: "Exploring flavor through the live product."
   },
   {
     id: "connect",
     label: "Connect",
-    title: "Community + water",
-    copy: "Events, GPTs for service, and a mission for clean, accessible water."
+    title: "Connect",
+    copy: "Community around tasting, teaching, and learning."
   }
 ] as const;
 
@@ -58,9 +58,8 @@ export function SipopediaPreview() {
             <span className="eyebrow">Sip Studies</span>
             <h4>Learn. Taste. Connect.</h4>
             <p>
-              A beverage education hub: Sip Studies curriculum, Sippy GPTs, a flavor
-              blog, community, and a water-access mission — built as a Vite React
-              TypeScript SPA.
+              Learn / Taste / Connect beverage education SPA (Vite/React/TS). Live
+              product for studying, exploring flavor, and community.
             </p>
           </div>
           <div className="lane-grid">

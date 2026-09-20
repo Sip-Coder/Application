@@ -4,11 +4,7 @@ export function SelectedWork() {
   return (
     <section className="section wrap" id="selected" aria-labelledby="selected-title">
       <div className="section-head">
-        <p className="eyebrow">More public work</p>
-        <h2 id="selected-title">Selected repos.</h2>
-        <p>
-          Smaller cards for breadth. Each one opens the public GitHub repository.
-        </p>
+        <h2 id="selected-title">Selected work</h2>
       </div>
       <div className="work-grid">
         {selectedWork.map((item, index) => (
@@ -20,9 +16,8 @@ export function SelectedWork() {
             rel="noreferrer"
             style={{ borderTopColor: workAccents[index] }}
           >
-            <span>{item.tag}</span>
             <h3>{item.title}</h3>
-            <p>{item.blurb}</p>
+            <p>{item.note}</p>
           </a>
         ))}
       </div>
