@@ -1,4 +1,4 @@
-import { selectedWork } from "../data/site";
+import { selectedWork, workAccents } from "../data/site";
 
 export function SelectedWork() {
   return (
@@ -11,13 +11,14 @@ export function SelectedWork() {
         </p>
       </div>
       <div className="work-grid">
-        {selectedWork.map((item) => (
+        {selectedWork.map((item, index) => (
           <a
             className="work-card"
             key={item.title}
             href={item.href}
             target="_blank"
             rel="noreferrer"
+            style={{ borderTopColor: workAccents[index] }}
           >
             <span>{item.tag}</span>
             <h3>{item.title}</h3>

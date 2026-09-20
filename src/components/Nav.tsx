@@ -1,4 +1,5 @@
 import { profile } from "../data/site";
+import { BrandMark } from "./BrandMark";
 
 const links = [
   { href: "#work", label: "Case studies" },
@@ -12,7 +13,7 @@ export function Nav() {
     <header className="nav">
       <div className="wrap nav__inner">
         <a className="brand" href="#top">
-          <img src={profile.portrait} alt="" width={40} height={40} />
+          <BrandMark compact />
           <div>
             <strong>{profile.name}</strong>
             <span>{profile.role}</span>

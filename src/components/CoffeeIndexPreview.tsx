@@ -24,19 +24,17 @@ export function CoffeeIndexPreview() {
       <div className="coffee-preview">
         <div className="coffee-preview__hero">
           <div>
-            <span className="eyebrow" style={{ color: "#a6452d" }}>
-              Coffee Index / United States
-            </span>
-            <h4>What a solo espresso costs across the country.</h4>
+            <span className="coffee-eyebrow">Coffee Index / United States</span>
+            <h4>What a solo espresso costs.</h4>
             <p>
               Modeled cafe prices against a {money(nationalAverage)} national
-              baseline. Baseline equals index 100.
+              baseline. Index 100 = baseline.
             </p>
           </div>
           <div className="coffee-hero-card">
             <span>National baseline</span>
             <b>{money(nationalAverage)}</b>
-            <span>modeled solo espresso</span>
+            <span>solo espresso</span>
           </div>
         </div>
         <div className="coffee-list">

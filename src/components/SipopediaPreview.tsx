@@ -23,7 +23,7 @@ const lanes = [
 ] as const;
 
 export function SipopediaPreview() {
-  const [tab, setTab] = useState<"live" | "map">("live");
+  const [tab, setTab] = useState<"live" | "map">("map");
 
   return (
     <SiteFrame urlLabel="sipopedia.com">

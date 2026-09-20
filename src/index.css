@@ -249,11 +249,60 @@ img {
   padding: 22px;
 }
 
-.portrait-card img {
-  width: 100%;
-  height: auto;
+.brand-mark {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 auto;
   display: block;
-  border-radius: 22px;
+}
+
+.identity-panel {
+  display: grid;
+  gap: 10px;
+  padding: 8px 6px 0;
+}
+
+.identity-panel__mark {
+  margin: 0;
+  color: var(--cream);
+  font-family: var(--font-display);
+  font-size: clamp(5.4rem, 10vw, 7.2rem);
+  line-height: 0.8;
+  letter-spacing: -0.08em;
+}
+
+.identity-panel__role {
+  margin: 0;
+  color: var(--cyan);
+  font-size: 0.92rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.identity-panel__copy {
+  margin: 0;
+  max-width: 28ch;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.identity-lanes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.identity-lanes span {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 10px;
+  color: var(--gold);
+  font-size: 0.78rem;
+}
+
+.identity-cup {
+  width: min(220px, 100%);
+  margin-top: 8px;
 }
 
 .portrait-card footer {
@@ -551,9 +600,20 @@ img {
 
 .coffee-preview__hero {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: 12px;
+  align-items: end;
   margin-bottom: 12px;
+}
+
+.coffee-eyebrow {
+  display: block;
+  margin-bottom: 8px;
+  color: #a6452d;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .coffee-preview h4 {
@@ -641,6 +701,22 @@ img {
   font-weight: 700;
 }
 
+.zen-note,
+.zen-foot {
+  width: min(320px, 100%);
+  margin: 0;
+}
+
+.zen-note {
+  color: rgba(232, 238, 245, 0.55);
+  font-size: 0.82rem;
+}
+
+.zen-foot {
+  color: rgba(232, 238, 245, 0.28);
+  font-size: 0.7rem;
+}
+
 .zen-orb {
   width: 64px;
   height: 64px;
@@ -708,6 +784,7 @@ img {
   min-height: 180px;
   padding: 18px;
   border: 1px solid var(--line);
+  border-top: 3px solid var(--cyan);
   border-radius: 18px;
   background: rgba(8, 32, 38, 0.72);
   text-decoration: none;

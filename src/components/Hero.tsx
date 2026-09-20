@@ -1,4 +1,5 @@
 import { credentials, profile } from "../data/site";
+import { BrandMark } from "./BrandMark";
 
 export function Hero() {
   return (
@@ -38,12 +39,10 @@ export function Hero() {
         </div>
       </div>
       <aside className="portrait-card">
-        <img src={profile.portrait} alt="Jonathan Yu monogram" width={420} height={520} />
+        <BrandMark />
         <footer>
-          <strong>{profile.role}</strong>
-          <span>
-            {profile.location} · {profile.sipstudies.replace("https://", "")}
-          </span>
+          <strong>{profile.location}</strong>
+          <span>{profile.sipstudies.replace("https://", "")}</span>
         </footer>
       </aside>
     </section>

@@ -8,7 +8,6 @@ export const profile = {
   sipstudies: "https://sipstudies.com",
   sipopedia: "https://sipopedia.com",
   bioSite: "https://bio.site/SipStudies",
-  portrait: "/jonathan-yu-mark.svg",
   positioning:
     "I turn beverage craft, classroom teaching, and AI-assisted building into learning products people can actually use.",
   summary:
@@ -142,11 +141,13 @@ export const zenMixes = [
   { id: "forest", label: "Forest", layers: "Birds · Stream · Wind" }
 ] as const;
 
-export const zenLayers = [
-  { id: "rain", label: "Rain", level: 62 },
-  { id: "coffee", label: "Café", level: 28 },
-  { id: "fan", label: "Fan", level: 40 },
-  { id: "forest", label: "Forest", level: 18 },
-  { id: "ocean", label: "Ocean", level: 0 },
-  { id: "fire", label: "Fire", level: 0 }
-] as const;
+export const zenLayers = ["rain", "coffee", "fan", "forest", "ocean", "fire"] as const;
+
+export const zenMixLevels: Record<(typeof zenMixes)[number]["id"], Record<(typeof zenLayers)[number], number>> = {
+  focus: { rain: 0, coffee: 28, fan: 40, forest: 8, ocean: 0, fire: 0 },
+  sleep: { rain: 70, coffee: 0, fan: 0, forest: 0, ocean: 52, fire: 0 },
+  storm: { rain: 78, coffee: 0, fan: 16, forest: 0, ocean: 22, fire: 0 },
+  forest: { rain: 12, coffee: 0, fan: 0, forest: 72, ocean: 0, fire: 24 }
+};
+
+export const workAccents = ["#9fdaf5", "#edd4a8", "#d8e6da", "#817985"] as const;
