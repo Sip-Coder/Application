@@ -35,7 +35,7 @@ In the repository, set **Settings → Pages → Build and deployment → Source*
 1. **Hero** — Jonathan Yu, builder-educator for beverage + AI product, with View resume / Download PDF.
 2. **Case studies** — Sipopedia.com, Coffee Index, and Zen Noise, each with a live interactive iframe (browser chrome, click/scroll, no blocking overlay). Frames are 420×320.
 3. **Selected work** — Rose Quartz, Biz Bookkeeper, and sunset-in-monaco-rpg as stacked same-origin interactive embeds (480×300), plus the earlier application demo as a layout reference only.
-4. **Resume** — in-page PDF viewer and download for the combined V4 resume.
+4. **Resume** — in-page pdf.js canvas viewer and download for `Jonathan_Yu_Resume.pdf`.
 5. **Contact** — [GitHub](https://github.com/Sip-Coder), [sipopedia.com](https://sipopedia.com), [sipstudies.com](https://sipstudies.com).
 
 Public project copy is drawn from live Sipopedia / Sip Studies pages and public Sip-Coder repositories. Those other repos are not modified from this site.
@@ -80,13 +80,10 @@ npm run vendor:sunset-rpg
 
 ## Resume
 
-Jonathan’s combined resume is copied into this repo (no runtime dependency on the demo site):
+Jonathan’s current resume is stored in this repo as:
 
-`public/resume/JONATHAN_YU_SIP_STUDIES_COMBINED_RESUME_V4_CRITICAL_ON_HAND_2026-06-02.pdf`
+`public/resume/Jonathan_Yu_Resume.pdf`
 
-Source: [jonathan-yu-application-demo](https://github.com/Sip-Coder/jonathan-yu-application-demo/blob/main/public/documents/resume/JONATHAN_YU_SIP_STUDIES_COMBINED_RESUME_V4_CRITICAL_ON_HAND_2026-06-02.pdf). The letter-size sibling in that folder is the same PDF bytes, so only one file is vendored.
+Hero **Download PDF**, Resume **Download PDF** / **Open PDF**, and the in-page viewer all point at `/Application/resume/Jonathan_Yu_Resume.pdf`.
 
-The Resume section (and the hero CTAs) provide:
-
-- An in-page PDF iframe so recruiters can read it on the site
-- Download PDF / Open PDF links
+The Resume card renders PDF pages with [pdf.js](https://mozilla.github.io/pdf.js/) onto canvases (not `<iframe>`, `<embed>`, or `<object>`). Mobile Chrome otherwise shows a filename + Open placeholder instead of the pages. Scroll the card to read every page; use the links to download or open the file.

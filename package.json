@@ -13,6 +13,7 @@
     "vendor:sunset-rpg": "bash scripts/vendor-sunset-in-monaco-rpg.sh"
   },
   "dependencies": {
+    "pdfjs-dist": "^6.3.289",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
