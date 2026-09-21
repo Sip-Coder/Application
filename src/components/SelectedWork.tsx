@@ -8,7 +8,7 @@ export function SelectedWork() {
   return (
     <section className="cases" id="selected" aria-label="Selected work">
       {featured.map((item) => (
-        <article className="case" key={item.title}>
+        <article className="case case--work" key={item.title}>
           <SiteFrame
             variant="work"
             urlLabel={item.previewLabel}

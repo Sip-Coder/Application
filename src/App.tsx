@@ -12,7 +12,6 @@ export default function App() {
       <CaseStudies />
       <p className="kicker">Selected work</p>
       <SelectedWork />
-      <p className="kicker">Resume</p>
       <Resume />
       <Contact />
     </div>

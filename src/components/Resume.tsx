@@ -5,6 +5,7 @@ export function Resume() {
 
   return (
     <section className="resume" id="resume" aria-labelledby="resume-title">
+      <p className="kicker">Resume</p>
       <div className="resume__copy">
         <h2 id="resume-title">{resume.title}</h2>
         <p>{resume.summary}</p>
