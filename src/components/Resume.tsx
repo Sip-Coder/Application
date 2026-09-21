@@ -1,7 +1,13 @@
+import { lazy, Suspense, useState } from "react";
 import { resume } from "../data/site";
 
+const ResumePdfViewer = lazy(async () => {
+  const mod = await import("./ResumePdfViewer");
+  return { default: mod.ResumePdfViewer };
+});
+
 export function Resume() {
-  const viewerSrc = `${resume.href}#view=FitH`;
+  const [viewerStatus, setViewerStatus] = useState("Loading…");
 
   return (
     <section className="resume" id="resume" aria-labelledby="resume-title">
@@ -26,8 +32,21 @@ export function Resume() {
           <a className="resume-frame__url" href={resume.href} target="_blank" rel="noreferrer">
             {resume.fileName}
           </a>
+          <span className="resume-frame__meta">{viewerStatus}</span>
         </div>
-        <iframe title="Jonathan Yu combined resume" src={viewerSrc} loading="lazy" />
+        <Suspense
+          fallback={
+            <div className="resume-pdf resume-pdf--message" aria-live="polite">
+              <p>Loading resume…</p>
+            </div>
+          }
+        >
+          <ResumePdfViewer
+            src={resume.href}
+            fileName={resume.fileName}
+            onStatusChange={setViewerStatus}
+          />
+        </Suspense>
       </div>
     </section>
   );

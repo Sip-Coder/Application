@@ -417,12 +417,66 @@ button {
   outline: none;
 }
 
-.resume-frame iframe {
+.resume-frame__meta {
+  flex: 0 0 auto;
+  color: var(--chrome-url);
+  white-space: nowrap;
+}
+
+.resume-pdf {
+  min-height: 0;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background: var(--preview);
+  padding: 12px;
+  touch-action: pan-y;
+  scroll-snap-type: y proximity;
+  outline: none;
+}
+
+.resume-pdf--message {
+  display: grid;
+  place-content: center;
+  overflow: hidden;
+  padding: 24px;
+  color: var(--muted);
+  text-align: center;
+  scroll-snap-type: none;
+}
+
+.resume-pdf--message p {
+  margin: 0;
+  max-width: 36ch;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.resume-pdf--message a {
+  color: var(--rust);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.resume-pdf--message a:hover,
+.resume-pdf--message a:focus-visible {
+  text-decoration: underline;
+  outline: none;
+}
+
+.resume-pdf__pages {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.resume-pdf__page {
   display: block;
   width: 100%;
-  height: 100%;
-  border: 0;
+  height: auto;
   background: #fff;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 8%);
+  scroll-snap-align: start;
 }
 
 .work-note {
@@ -497,5 +551,9 @@ button {
 
   .resume-frame {
     height: min(80vh, 760px);
+  }
+
+  .resume-pdf {
+    scroll-snap-type: y mandatory;
   }
 }
