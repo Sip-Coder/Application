@@ -9,7 +9,20 @@ export const profile = {
     "I design and ship learning tools that help people taste, teach, and connect — Sipopedia, Sip Studies, and focused apps like Coffee Index and Zen Noise."
 };
 
-const coffeeIndexEmbed = `${import.meta.env.BASE_URL}embeds/coffee-index/index.html`;
+const coffeeIndexEmbed = `${import.meta.env.BASE_URL}embeds/coffee-index/`;
+
+function embedUrl(slug: string) {
+  return `${import.meta.env.BASE_URL}embeds/${slug}/`;
+}
+
+export const resume = {
+  title: "Combined Sip Studies V4 PDF",
+  summary:
+    "Sip Studies + Critical On Hand combined resume (V4, June 2026). Read it on the page or download the PDF.",
+  fileName: "JONATHAN_YU_SIP_STUDIES_COMBINED_RESUME_V4_CRITICAL_ON_HAND_2026-06-02.pdf",
+  downloadName: "Jonathan_Yu_Resume.pdf",
+  href: `${import.meta.env.BASE_URL}resume/JONATHAN_YU_SIP_STUDIES_COMBINED_RESUME_V4_CRITICAL_ON_HAND_2026-06-02.pdf`
+};
 
 export const caseStudies = [
   {
@@ -50,21 +63,33 @@ export const selectedWork = [
   {
     title: "Rose Quartz",
     href: "https://github.com/Sip-Coder/Rose-Quartz",
+    hrefLabel: "github.com/Sip-Coder/Rose-Quartz",
+    previewSrc: embedUrl("rose-quartz"),
+    previewLabel: "/embeds/rose-quartz/",
     note: "github.com/Sip-Coder/Rose-Quartz"
   },
   {
     title: "Biz Bookkeeper",
     href: "https://github.com/Sip-Coder/Biz-Bookkeeper",
+    hrefLabel: "github.com/Sip-Coder/Biz-Bookkeeper",
+    previewSrc: embedUrl("biz-bookkeeper"),
+    previewLabel: "/embeds/biz-bookkeeper/",
     note: "github.com/Sip-Coder/Biz-Bookkeeper"
   },
   {
     title: "sunset-in-monaco-rpg",
     href: "https://github.com/Sip-Coder/sunset-in-monaco-rpg",
+    hrefLabel: "github.com/Sip-Coder/sunset-in-monaco-rpg",
+    previewSrc: embedUrl("sunset-in-monaco-rpg"),
+    previewLabel: "/embeds/sunset-in-monaco-rpg/",
     note: "github.com/Sip-Coder/sunset-in-monaco-rpg"
   },
   {
     title: "jonathan-yu-application-demo",
     href: "https://github.com/Sip-Coder/jonathan-yu-application-demo",
+    hrefLabel: "github.com/Sip-Coder/jonathan-yu-application-demo",
+    previewSrc: "",
+    previewLabel: "",
     note: "Layout reference only"
   }
 ] as const;

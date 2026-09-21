@@ -19,6 +19,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 24px;
 }
 
 body {
@@ -83,6 +84,38 @@ button {
   line-height: 28px;
 }
 
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--rust);
+  border-radius: 999px;
+  color: var(--white);
+  background: var(--rust);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.hero-cta--ghost {
+  color: var(--rust);
+  background: transparent;
+}
+
+.hero-cta:hover,
+.hero-cta:focus-visible {
+  outline: none;
+  filter: brightness(1.08);
+}
+
 .cases {
   display: flex;
   flex-direction: column;
@@ -97,6 +130,19 @@ button {
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: 12px;
+}
+
+.case--work {
+  padding: 20px;
+}
+
+.case--work .case__copy h3 {
+  font-size: 20px;
+}
+
+.case--work .case__copy p {
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .case__copy {
@@ -122,6 +168,18 @@ button {
   line-height: 22px;
 }
 
+.case__copy h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.case__copy h3 a:hover,
+.case__copy h3 a:focus-visible {
+  color: var(--rust);
+  text-decoration: underline;
+  outline: none;
+}
+
 .case__copy a {
   color: var(--rust);
   font-size: 13px;
@@ -136,14 +194,20 @@ button {
 }
 
 .site-frame {
-  width: 320px;
-  height: 200px;
-  flex: 0 0 320px;
+  width: 420px;
+  height: 320px;
+  flex: 0 0 420px;
   display: grid;
   grid-template-rows: 28px 1fr;
   overflow: hidden;
   border-radius: 8px;
   background: var(--chrome);
+}
+
+.site-frame--work {
+  width: 480px;
+  height: 300px;
+  flex: 0 0 480px;
 }
 
 .site-frame:fullscreen,
@@ -249,40 +313,116 @@ button {
   outline: none;
 }
 
-.work-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
+.work-note {
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 13px;
 }
 
-.work-card {
+.resume {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 16px;
+  padding: 24px;
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: 12px;
+}
+
+.resume .kicker {
+  margin: 0;
+}
+
+.resume__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.resume__copy h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.resume__copy p {
+  margin: 0;
+  max-width: 72ch;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.resume__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.resume__actions a {
+  color: var(--rust);
+  font-size: 13px;
+  font-weight: 500;
   text-decoration: none;
 }
 
-.work-card:hover,
-.work-card:focus-visible {
-  border-color: #cfc8be;
+.resume__actions a:hover,
+.resume__actions a:focus-visible {
+  text-decoration: underline;
   outline: none;
 }
 
-.work-thumb {
-  height: 140px;
-  border-radius: 8px;
-  background: var(--preview);
+.resume-frame {
+  display: grid;
+  grid-template-rows: 28px 1fr;
+  height: min(92vh, 980px);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--chrome);
 }
 
-.work-card h3 {
-  margin: 0;
-  color: var(--ink);
-  font-size: 14px;
-  font-weight: 600;
+.resume-frame__bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 10px;
+  color: var(--chrome-url);
+  background: var(--chrome);
+  font-size: 9px;
+}
+
+.resume-frame__bar i {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--chrome-dot);
+}
+
+.resume-frame__url {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  color: var(--chrome-url);
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.resume-frame__url:hover,
+.resume-frame__url:focus-visible {
+  color: #fff;
+  outline: none;
+}
+
+.resume-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #fff;
 }
 
 .work-note {
@@ -329,10 +469,6 @@ button {
   .page {
     padding: 48px 32px 64px;
   }
-
-  .work-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 800px) {
@@ -351,7 +487,15 @@ button {
 
   .site-frame {
     width: 100%;
-    height: 200px;
+    height: 320px;
     flex-basis: auto;
+  }
+
+  .site-frame--work {
+    height: 300px;
+  }
+
+  .resume-frame {
+    height: min(80vh, 760px);
   }
 }

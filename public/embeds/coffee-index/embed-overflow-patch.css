@@ -1,0 +1,20 @@
+/* Keep wide Coffee Index layouts from overflowing the 320px case-study iframe. */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+h1,
+.hero,
+.hero__copy,
+.hero-card,
+.stats-grid,
+.split-panel,
+.section-heading,
+.region-row,
+.market-card,
+.site-shell {
+  min-width: 0;
+  max-width: 100%;
+}

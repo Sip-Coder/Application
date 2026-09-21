@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "vendor:coffee-index": "bash scripts/vendor-coffee-index.sh"
+    "vendor:coffee-index": "bash scripts/vendor-coffee-index.sh",
+    "vendor:rose-quartz": "bash scripts/vendor-rose-quartz.sh",
+    "vendor:biz-bookkeeper": "bash scripts/vendor-biz-bookkeeper.sh",
+    "vendor:sunset-rpg": "bash scripts/vendor-sunset-in-monaco-rpg.sh"
   },
   "dependencies": {
     "react": "^19.1.1",

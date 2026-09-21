@@ -1,3 +1,4 @@
 Vendored from https://github.com/Sip-Coder/Coffee-Index.git
 Built with: vite build --base /Application/embeds/coffee-index/
+Plus scripts/embed-overflow-patch.css so the case-study iframe does not scroll sideways.
 Refresh: npm run vendor:coffee-index
