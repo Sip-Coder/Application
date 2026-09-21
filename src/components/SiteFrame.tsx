@@ -68,7 +68,7 @@ export function SiteFrame({ urlLabel, src, title, openHref, variant = "case" }: 
             ref={iframeRef}
             title={title}
             src={src}
-            loading={src.startsWith("http") ? "lazy" : "eager"}
+            loading={variant === "work" || src.startsWith("http") ? "lazy" : "eager"}
             referrerPolicy="no-referrer-when-downgrade"
             allow="autoplay; clipboard-write; fullscreen"
             allowFullScreen

@@ -26,7 +26,7 @@ export function Resume() {
             {resume.fileName}
           </a>
         </div>
-        <iframe title="Jonathan Yu combined resume" src={viewerSrc} />
+        <iframe title="Jonathan Yu combined resume" src={viewerSrc} loading="lazy" />
       </div>
     </section>
   );

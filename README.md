@@ -64,11 +64,11 @@ Selected Work uses the same `SiteFrame` live-iframe pattern as the case studies.
 
 | Project | Chrome URL | iframe `src` | Notes |
 | --- | --- | --- | --- |
-| **Rose Quartz** | `/embeds/rose-quartz/` | `/Application/embeds/rose-quartz/` | Production Vite multi-page build of [Sip-Coder/Rose-Quartz](https://github.com/Sip-Coder/Rose-Quartz). |
+| **Rose Quartz** | `/embeds/rose-quartz/` | `/Application/embeds/rose-quartz/` | Production Vite multi-page build of [Sip-Coder/Rose-Quartz](https://github.com/Sip-Coder/Rose-Quartz). Vendor script rebases `data-panorama-src` so the 360 room preview requests `/Application/embeds/rose-quartz/panoramas/…` instead of `/panoramas/…`. |
 | **Biz Bookkeeper** | `/embeds/biz-bookkeeper/` | `/Application/embeds/biz-bookkeeper/` | `artifacts/mockup-sandbox` has no mockup components. This vendors the **LedgerAI** Vite app from `artifacts/ledger` — dashboard, transactions, accounts, and the rest of the nav. The Replit API + PostgreSQL backend is **not** bundled, so live writes/account data are unavailable; pages still render with the app’s fallback figures and remain clickable. Iframe `src` uses a trailing-slash directory URL so wouter matches `/` (not `/index.html`). |
 | **sunset-in-monaco-rpg** | `/embeds/sunset-in-monaco-rpg/` | `/Application/embeds/sunset-in-monaco-rpg/` | Plain HTML/JS/CSS game copied as-is; playable in the iframe. |
 
-Selected-work frames are 480×300 in stacked rows (same site-within-a-site pattern as case studies). Title links still go to the public GitHub repos; rust links open the same-origin embed.
+Selected-work frames are 480×300 in stacked rows (same site-within-a-site pattern as case studies). Title links still go to the public GitHub repos; rust links open the same-origin embed. Those iframes use `loading="lazy"` so Rose Quartz / LedgerAI / the RPG do not fetch until near the viewport.
 
 Refresh those snapshots after upstream changes:
 

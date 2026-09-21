@@ -1,3 +1,4 @@
 Vendored from https://github.com/Sip-Coder/Rose-Quartz.git
 Built with: vite build --base /Application/embeds/rose-quartz/
+Rebases data-panorama-src to /Application/embeds/rose-quartz/ so the 360 room preview loads on GitHub Pages.
 Refresh: npm run vendor:rose-quartz
