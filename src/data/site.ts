@@ -16,7 +16,7 @@ function embedUrl(slug: string) {
 }
 
 export const resume = {
-  title: "Combined resume",
+  title: "Combined Sip Studies V4 PDF",
   summary:
     "Sip Studies + Critical On Hand combined resume (V4, June 2026). Read it on the page or download the PDF.",
   fileName: "JONATHAN_YU_SIP_STUDIES_COMBINED_RESUME_V4_CRITICAL_ON_HAND_2026-06-02.pdf",
