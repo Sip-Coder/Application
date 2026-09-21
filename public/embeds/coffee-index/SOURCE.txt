@@ -1,0 +1,3 @@
+Vendored from https://github.com/Sip-Coder/Coffee-Index.git
+Built with: vite build --base /Application/embeds/coffee-index/
+Refresh: npm run vendor:coffee-index
