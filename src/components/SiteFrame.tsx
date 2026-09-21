@@ -5,6 +5,7 @@ type SiteFrameProps = {
   src: string;
   title: string;
   openHref: string;
+  variant?: "case" | "work";
 };
 
 type FrameStatus = "loading" | "ready" | "blocked";
@@ -19,7 +20,7 @@ function isBlankFrame(frame: HTMLIFrameElement) {
   }
 }
 
-export function SiteFrame({ urlLabel, src, title, openHref }: SiteFrameProps) {
+export function SiteFrame({ urlLabel, src, title, openHref, variant = "case" }: SiteFrameProps) {
   const frameRef = useRef<HTMLDivElement>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const [status, setStatus] = useState<FrameStatus>("loading");
@@ -45,7 +46,11 @@ export function SiteFrame({ urlLabel, src, title, openHref }: SiteFrameProps) {
   }
 
   return (
-    <div className="site-frame" ref={frameRef} data-website-preview>
+    <div
+      className={variant === "work" ? "site-frame site-frame--work" : "site-frame"}
+      ref={frameRef}
+      data-website-preview
+    >
       <div className="site-frame__bar">
         <i aria-hidden="true" />
         <i aria-hidden="true" />

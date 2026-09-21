@@ -1,6 +1,7 @@
 import { CaseStudies } from "./components/CaseStudies";
 import { Contact } from "./components/Contact";
 import { Hero } from "./components/Hero";
+import { Resume } from "./components/Resume";
 import { SelectedWork } from "./components/SelectedWork";
 
 export default function App() {
@@ -11,6 +12,8 @@ export default function App() {
       <CaseStudies />
       <p className="kicker">Selected work</p>
       <SelectedWork />
+      <p className="kicker">Resume</p>
+      <Resume />
       <Contact />
     </div>
   );

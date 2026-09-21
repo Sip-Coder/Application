@@ -1,0 +1,7 @@
+Vendored from https://github.com/Sip-Coder/Biz-Bookkeeper.git (artifacts/ledger Vite app).
+artifacts/mockup-sandbox has no mockup components, so this uses the LedgerAI
+front-end instead. Built with: BASE_PATH=/Application/embeds/biz-bookkeeper/ pnpm --filter @workspace/ledger run build
+The live Replit API / PostgreSQL backend is not bundled. Pages render with the
+app's built-in fallback figures and remain navigable; live writes and live
+account data need the full Replit stack.
+Refresh: npm run vendor:biz-bookkeeper

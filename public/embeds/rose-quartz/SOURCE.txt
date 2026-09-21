@@ -1,0 +1,3 @@
+Vendored from https://github.com/Sip-Coder/Rose-Quartz.git
+Built with: vite build --base /Application/embeds/rose-quartz/
+Refresh: npm run vendor:rose-quartz

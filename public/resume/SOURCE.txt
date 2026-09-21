@@ -1,0 +1,3 @@
+Copied from https://github.com/Sip-Coder/jonathan-yu-application-demo/blob/main/public/documents/resume/JONATHAN_YU_SIP_STUDIES_COMBINED_RESUME_V4_CRITICAL_ON_HAND_2026-06-02.pdf
+
+The letter-size sibling in that folder is the same PDF bytes; this site vendors the combined V4 file once under public/resume/.
