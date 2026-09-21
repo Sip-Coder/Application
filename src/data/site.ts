@@ -9,10 +9,10 @@ export const profile = {
     "I design and ship learning tools that help people taste, teach, and connect — Sipopedia, Sip Studies, and focused apps like Coffee Index and Zen Noise."
 };
 
-const coffeeIndexEmbed = `${import.meta.env.BASE_URL}embeds/coffee-index/index.html`;
+const coffeeIndexEmbed = `${import.meta.env.BASE_URL}embeds/coffee-index/`;
 
 function embedUrl(slug: string) {
-  return `${import.meta.env.BASE_URL}embeds/${slug}/index.html`;
+  return `${import.meta.env.BASE_URL}embeds/${slug}/`;
 }
 
 export const resume = {

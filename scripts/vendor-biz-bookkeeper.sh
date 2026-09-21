@@ -16,6 +16,8 @@ trap cleanup EXIT
 
 git clone --depth 1 "$SRC_REPO" "$WORK"
 
+# Fail-fast queries so the static preview shows fallback dashboard data
+# after the missing Replit API errors, instead of spinning forever.
 python3 - "$WORK/artifacts/ledger/src/App.tsx" <<'PY'
 from pathlib import Path
 import sys

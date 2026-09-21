@@ -47,7 +47,7 @@ The case studies load real sites inside `SiteFrame` iframes — not screenshots 
 | Case study | Chrome / copy URL | iframe `src` | Notes |
 | --- | --- | --- | --- |
 | **Sipopedia** | `https://sipopedia.com/#app/starter` | `https://sipopedia.com/#app/starter` | Live product. |
-| **Coffee Index** | `/embeds/coffee-index/` | `/Application/embeds/coffee-index/index.html` | Same-origin embed. There is no public Replit host, so the built Vite app from [Sip-Coder/Coffee-Index](https://github.com/Sip-Coder/Coffee-Index) is vendored under `public/embeds/coffee-index/` with asset base `/Application/embeds/coffee-index/`. `embed-overflow-patch.css` clips wide hero type so the iframe does not scroll sideways. |
+| **Coffee Index** | `/embeds/coffee-index/` | `/Application/embeds/coffee-index/` | Same-origin embed. There is no public Replit host, so the built Vite app from [Sip-Coder/Coffee-Index](https://github.com/Sip-Coder/Coffee-Index) is vendored under `public/embeds/coffee-index/` with asset base `/Application/embeds/coffee-index/`. `embed-overflow-patch.css` clips wide hero type so the iframe does not scroll sideways. |
 | **Zen Noise** | `https://zen-noise.replit.app/` | `https://zen-noise.replit.app/` | Live Replit host (confirmed HTTP 200). |
 
 Case-study frames are 320×280 with dark browser chrome (taller than the original 320×200 Figma thumb). Users can click, scroll, and interact inside each iframe (no blocking overlay). If a remote host sends `X-Frame-Options` or a restricting `frame-ancestors` policy, the iframe is tried first, then a fallback with **Open live site** is shown.
@@ -64,9 +64,9 @@ Selected Work uses the same `SiteFrame` live-iframe pattern as the case studies.
 
 | Project | Chrome URL | iframe `src` | Notes |
 | --- | --- | --- | --- |
-| **Rose Quartz** | `/embeds/rose-quartz/` | `/Application/embeds/rose-quartz/index.html` | Production Vite multi-page build of [Sip-Coder/Rose-Quartz](https://github.com/Sip-Coder/Rose-Quartz). |
-| **Biz Bookkeeper** | `/embeds/biz-bookkeeper/` | `/Application/embeds/biz-bookkeeper/index.html` | `artifacts/mockup-sandbox` has no mockup components. This vendors the **LedgerAI** Vite app from `artifacts/ledger` — dashboard, transactions, accounts, and the rest of the nav. The Replit API + PostgreSQL backend is **not** bundled, so live writes/account data are unavailable; pages still render with the app’s fallback figures and remain clickable. |
-| **sunset-in-monaco-rpg** | `/embeds/sunset-in-monaco-rpg/` | `/Application/embeds/sunset-in-monaco-rpg/index.html` | Plain HTML/JS/CSS game copied as-is; playable in the iframe. |
+| **Rose Quartz** | `/embeds/rose-quartz/` | `/Application/embeds/rose-quartz/` | Production Vite multi-page build of [Sip-Coder/Rose-Quartz](https://github.com/Sip-Coder/Rose-Quartz). |
+| **Biz Bookkeeper** | `/embeds/biz-bookkeeper/` | `/Application/embeds/biz-bookkeeper/` | `artifacts/mockup-sandbox` has no mockup components. This vendors the **LedgerAI** Vite app from `artifacts/ledger` — dashboard, transactions, accounts, and the rest of the nav. The Replit API + PostgreSQL backend is **not** bundled, so live writes/account data are unavailable; pages still render with the app’s fallback figures and remain clickable. Iframe `src` uses a trailing-slash directory URL so wouter matches `/` (not `/index.html`). |
+| **sunset-in-monaco-rpg** | `/embeds/sunset-in-monaco-rpg/` | `/Application/embeds/sunset-in-monaco-rpg/` | Plain HTML/JS/CSS game copied as-is; playable in the iframe. |
 
 Selected-work frames fill the card width and are 300px tall (320px on small screens) so they are usable, not tiny beige placeholders. Title links still go to the public GitHub repos.
 
