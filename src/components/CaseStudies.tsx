@@ -10,8 +10,7 @@ export function CaseStudies() {
             urlLabel={study.previewLabel}
             src={study.previewSrc}
             title={`${study.title} live preview`}
-            openHref={study.openHref}
-            openLabel={study.openLabel}
+            openHref={study.href}
           />
           <div className="case__copy">
             <h3>{study.title}</h3>

@@ -41,15 +41,15 @@ Public project copy is drawn from live Sipopedia / Sip Studies pages and public 
 
 ## Case study embeds
 
-The case studies load real sites inside `SiteFrame` iframes — not React mock UIs.
+The case studies load real sites inside `SiteFrame` iframes — not screenshots or React mock UIs. Chrome URL labels and rust copy links match Daisy’s Figma handoff.
 
-| Case study | iframe `src` | Notes |
-| --- | --- | --- |
-| **Sipopedia** | `https://sipopedia.com/#app/starter` | Live product. Also linked out to [sipopedia.com](https://sipopedia.com). |
-| **Coffee Index** | `/Application/embeds/coffee-index/index.html` | Same-origin embed. There is no public Replit host, so the built Vite app from [Sip-Coder/Coffee-Index](https://github.com/Sip-Coder/Coffee-Index) is vendored under `public/embeds/coffee-index/` with asset base `/Application/embeds/coffee-index/`. |
-| **Zen Noise** | `https://zen-noise.replit.app/` | Live Replit host (confirmed HTTP 200). |
+| Case study | Chrome / copy URL | iframe `src` | Notes |
+| --- | --- | --- | --- |
+| **Sipopedia** | `https://sipopedia.com/#app/starter` | `https://sipopedia.com/#app/starter` | Live product. |
+| **Coffee Index** | `/embeds/coffee-index/` | `/Application/embeds/coffee-index/index.html` | Same-origin embed. There is no public Replit host, so the built Vite app from [Sip-Coder/Coffee-Index](https://github.com/Sip-Coder/Coffee-Index) is vendored under `public/embeds/coffee-index/` with asset base `/Application/embeds/coffee-index/`. |
+| **Zen Noise** | `https://zen-noise.replit.app/` | `https://zen-noise.replit.app/` | Live Replit host (confirmed HTTP 200). |
 
-If a remote host sends `X-Frame-Options` or a restricting `frame-ancestors` policy, the iframe is tried first and the chrome falls back to **Open live site**.
+Frames are 320×200 with dark browser chrome. Users can click, scroll, and interact inside each iframe (no blocking overlay). If a remote host sends `X-Frame-Options` or a restricting `frame-ancestors` policy, the iframe is tried first, then a fallback with **Open live site** is shown.
 
 Refresh the Coffee Index snapshot after upstream changes:
 

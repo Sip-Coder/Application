@@ -5,7 +5,6 @@ type SiteFrameProps = {
   src: string;
   title: string;
   openHref: string;
-  openLabel?: string;
 };
 
 type FrameStatus = "loading" | "ready" | "blocked";
@@ -20,13 +19,7 @@ function isBlankFrame(frame: HTMLIFrameElement) {
   }
 }
 
-export function SiteFrame({
-  urlLabel,
-  src,
-  title,
-  openHref,
-  openLabel = "Open live site"
-}: SiteFrameProps) {
+export function SiteFrame({ urlLabel, src, title, openHref }: SiteFrameProps) {
   const frameRef = useRef<HTMLDivElement>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const [status, setStatus] = useState<FrameStatus>("loading");
@@ -57,9 +50,8 @@ export function SiteFrame({
         <i aria-hidden="true" />
         <i aria-hidden="true" />
         <i aria-hidden="true" />
-        <strong title={urlLabel}>{urlLabel}</strong>
-        <a href={openHref} target="_blank" rel="noreferrer">
-          {openLabel}
+        <a className="site-frame__url" href={openHref} target="_blank" rel="noreferrer" title={urlLabel}>
+          {urlLabel}
         </a>
         <button type="button" onClick={() => void toggleFullscreen()}>
           Fullscreen
@@ -88,7 +80,7 @@ export function SiteFrame({
               <code>X-Frame-Options</code> or <code>frame-ancestors</code>).
             </p>
             <a href={openHref} target="_blank" rel="noreferrer">
-              {openLabel}
+              Open live site
             </a>
           </div>
         ) : null}

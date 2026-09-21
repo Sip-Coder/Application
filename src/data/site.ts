@@ -18,24 +18,20 @@ export const caseStudies = [
     title: "Sipopedia.com",
     summary:
       "Learn / Taste / Connect beverage education SPA (Vite/React/TS). Live product for studying, exploring flavor, and community.",
-    href: "https://sipopedia.com",
-    hrefLabel: "sipopedia.com",
+    href: "https://sipopedia.com/#app/starter",
+    hrefLabel: "https://sipopedia.com/#app/starter",
     previewSrc: "https://sipopedia.com/#app/starter",
-    previewLabel: "sipopedia.com/#app/starter",
-    openHref: "https://sipopedia.com",
-    openLabel: "Open live site"
+    previewLabel: "https://sipopedia.com/#app/starter"
   },
   {
     id: "coffee-index",
     eyebrow: "02",
     title: "Coffee Index",
     summary: "Vite coffee tasting/index app from the Sip Studies build lane.",
-    href: "https://github.com/Sip-Coder/Coffee-Index",
-    hrefLabel: "github.com/Sip-Coder/Coffee-Index",
+    href: coffeeIndexEmbed,
+    hrefLabel: "/embeds/coffee-index/",
     previewSrc: coffeeIndexEmbed,
-    previewLabel: "embeds/coffee-index",
-    openHref: coffeeIndexEmbed,
-    openLabel: "Open embed"
+    previewLabel: "/embeds/coffee-index/"
   },
   {
     id: "zen-noise",
@@ -43,12 +39,10 @@ export const caseStudies = [
     title: "Zen Noise",
     summary:
       "Ambient focus app with Web Audio layers, curated mixes, and shareable links.",
-    href: "https://github.com/Sip-Coder/Zen-Noise",
-    hrefLabel: "github.com/Sip-Coder/Zen-Noise",
+    href: "https://zen-noise.replit.app/",
+    hrefLabel: "https://zen-noise.replit.app/",
     previewSrc: "https://zen-noise.replit.app/",
-    previewLabel: "zen-noise.replit.app",
-    openHref: "https://zen-noise.replit.app/",
-    openLabel: "Open live site"
+    previewLabel: "https://zen-noise.replit.app/"
   }
 ] as const;
 
